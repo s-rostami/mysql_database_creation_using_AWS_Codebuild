@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
-    - export AWS_REGION="us-west-1"
+    - export AWS_REGION="us-east-1"
     - export RDS_DATABASE_NAME="ntier"
     - export RDS_USER_NAME="admin"
     - export RDS_PASSWORD="password"
