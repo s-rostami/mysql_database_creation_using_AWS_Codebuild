@@ -1,6 +1,7 @@
 version: 0.2
 phases:
   install:
+    commands:
     - export AWS_REGION="us-west-1"
     - export SECURITY_GROUP_ID="sg-075decb0f531d1ee9"
     - export RDS_DATABASE_NAME="ntier"
