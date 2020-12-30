@@ -7,7 +7,7 @@ phases:
     - export RDS_USER_NAME="admin"
     - export RDS_PASSWORD="password"
 
-    - aws rds create-db-instance --db-instance-identifier ${RDS_DATABASE_NAME} --db-name ${RDS_DATABASE_NAME} --vpc-security-group-ids ${vpc-05858b9e73e251b3a} --allocated-storage 20 --db-instance-class db.t2.small --engine mysql --master-username ${RDS_USER_NAME} --master-user-password ${RDS_PASSWORD} --region ${AWS_REGION}
+    - aws rds create-db-instance --db-instance-identifier ${RDS_DATABASE_NAME} --db-name ${RDS_DATABASE_NAME} --vpc-security-group-ids sg-075decb0f531d1ee9 --db-subnet-group-name default-vpc-05858b9e73e251b3a --allocated-storage 20 --db-instance-class db.t2.small --engine mysql --master-username ${RDS_USER_NAME} --master-user-password ${RDS_PASSWORD} --region ${AWS_REGION}
 
     - aws rds wait db-instance-available --db-instance-identifier ${RDS_DATABASE_NAME}
 
