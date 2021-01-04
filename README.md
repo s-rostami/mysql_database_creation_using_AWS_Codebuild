@@ -1,5 +1,5 @@
 # mysql_database_creation_using_AWS_Codebuild
- creating mysql database and a table using AWS codebuild:
+ Creating mysql database and a table using AWS codebuild:
  
  - buildspec.yml file has two main stapes:
    1. Creating the RDS mysql database within a predefined VPC and subnet 
@@ -7,7 +7,7 @@
    
  - To create RDS mysql database, AWS cli commands were used in buildspec.yml file. therefore, in the setup of the codebuild process, amazon linux image was used where AWS Cli is already installed.
  
- - new role also was created for this specific build project
+ - New role also was created for this specific build project
  
  - In order to create the mysql table, mysql client was installed on the container and mysql client commands were used to connect to the table and create the table
  
