@@ -20,4 +20,4 @@ phases:
     - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password database1 -e "SHOW TABLES; CREATE TABLE users (name VARCHAR(20), email VARCHAR(20)); SHOW TABLES;"
     
     - echo "connecting to the database and adding data"
-    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password database1 -e "INSERT INTO users VALUES ('user1', 'user1-gmail.com'); SELECT * FROM users;"
+    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password database1 -e "INSERT INTO users VALUES ('user1', 'user1email'); SELECT * FROM users;"
