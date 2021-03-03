@@ -4,7 +4,7 @@ phases:
     commands:
     
     - export AWS_REGION="us-east-1"
-    - export RDS_DATABASE_NAME="database1"
+    - export RDS_DATABASE_NAME="ntier"
     - export RDS_USER_NAME="admin"
     - export RDS_PASSWORD="password"
     
@@ -17,7 +17,7 @@ phases:
     - yum install -y mysql
     
     - echo "connecting to the database and creating table"
-    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password database1 -e "SHOW TABLES; CREATE TABLE users (name VARCHAR(20), email VARCHAR(20)); SHOW TABLES;"
+    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password ntier -e "SHOW TABLES; CREATE TABLE user (name VARCHAR(20), email VARCHAR(20)); SHOW TABLES;"
     
     - echo "connecting to the database and adding data"
-    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password database1 -e "INSERT INTO users VALUES ('user1', 'user1email'); SELECT * FROM users;"
+    - mysql --host=database1.cvvkrojoestg.us-east-1.rds.amazonaws.com --port=3306 --user=admin --password=password ntier -e "INSERT INTO user VALUES ('user1', 'user1email'); SELECT * FROM user;"
